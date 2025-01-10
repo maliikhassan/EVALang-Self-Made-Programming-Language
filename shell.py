@@ -1,4 +1,4 @@
-import basic
+import evalang
 
 while True:
 	text = input('EvaLang > ')
