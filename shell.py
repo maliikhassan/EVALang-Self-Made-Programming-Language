@@ -1,8 +1,8 @@
-import evalang
+import basic
 
 while True:
-    start = input('EvaLang > ')
-    result,error = evalang.Run('<stdin>',start)
+	text = input('EvaLang > ')
+	result, error = basic.run('<stdin>', text)
 
-    if error: print(error.as_string())
-    else: print(result)
+	if error: print(error.as_string())
+	else: print(result)
