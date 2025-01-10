@@ -12,6 +12,7 @@ def string_with_arrows(text, pos_start, pos_end):
 		col_start = pos_start.col if i == 0 else 0
 		col_end = pos_end.col if i == line_count - 1 else len(line) - 1
 
+
 		result += line + '\n'
 		result += ' ' * col_start + '^' * (col_end - col_start)
 

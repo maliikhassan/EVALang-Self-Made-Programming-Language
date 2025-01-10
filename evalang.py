@@ -642,7 +642,7 @@ def run(fn, text):
 	ast = parser.parse()
 	if ast.error: return None, ast.error
 
-	# Run program
+	# Running program
 	interpreter = Interpreter()
 	context = Context('<program>')
 	context.symbol_table = global_symbol_table
