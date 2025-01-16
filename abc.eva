@@ -1,7 +1,7 @@
 fun_pounce sum(x,y)
     whisker z = x+y
     return_belly z
-END
+end_nap
 
 ## main code
 
@@ -13,27 +13,27 @@ meow(b)
 
 for_paw i = 0 TO 10 THEN
     meow ("OKOK")
-END
+end_nap
 
 while_tail_wag a < 15 THEN
     meow(a)
     whisker a = a+1
-END
+end_nap
 
 fun_pounce abc()
     meow("I am Function Declaration")
-END
+end_nap
 
 abc()
 
 fun_pounce abc1()
     whisker name = "I am Returned Name"
     return_belly name
-END
+end_nap
 meow(abc1())
 
 while_tail_wag TRUE THEN
     meow(a)
     if_meow a == 18 THEN break_tail
     whisker a = a+1
-END
+end_nap

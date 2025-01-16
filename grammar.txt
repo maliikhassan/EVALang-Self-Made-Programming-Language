@@ -34,26 +34,26 @@ list-expr   : LSQUARE (expr (COMMA expr)*)? RSQUARE
 
 if-expr     : KEYWORD:if_meow expr KEYWORD:THEN
               (statement if-expr-b|if-expr-c?)
-            | (NEWLINE statements KEYWORD:END|if-expr-b|if-expr-c)
+            | (NEWLINE statements KEYWORD:end_nap|if-expr-b|if-expr-c)
 
 if-expr-b   : KEYWORD:else_pounce expr KEYWORD:THEN
               (statement if-expr-b|if-expr-c?)
-            | (NEWLINE statements KEYWORD:END|if-expr-b|if-expr-c)
+            | (NEWLINE statements KEYWORD:end_nap|if-expr-b|if-expr-c)
 
 if-expr-c   : KEYWORD:else_nap
               statement
-            | (NEWLINE statements KEYWORD:END)
+            | (NEWLINE statements KEYWORD:end_nap)
 
 for-expr    : KEYWORD:for_paw IDENTIFIER EQ expr KEYWORD:TO expr 
               (KEYWORD:STEP expr)? KEYWORD:THEN
               statement
-            | (NEWLINE statements KEYWORD:END)
+            | (NEWLINE statements KEYWORD:end_nap)
 
 while-expr  : KEYWORD:while_tail_wag expr KEYWORD:THEN
               statement
-            | (NEWLINE statements KEYWORD:END)
+            | (NEWLINE statements KEYWORD:end_nap)
 
 func-def    : KEYWORD:fun_pounce IDENTIFIER?
               LPAREN (IDENTIFIER (COMMA IDENTIFIER)*)? RPAREN
               (ARROW expr)
-            | (NEWLINE statements KEYWORD:END)
+            | (NEWLINE statements KEYWORD:end_nap)
