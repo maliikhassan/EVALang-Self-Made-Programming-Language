@@ -44,12 +44,12 @@ if-expr-c   : KEYWORD:else_nap
               statement
             | (NEWLINE statements KEYWORD:END)
 
-for-expr    : KEYWORD:FOR IDENTIFIER EQ expr KEYWORD:TO expr 
+for-expr    : KEYWORD:for_paw IDENTIFIER EQ expr KEYWORD:TO expr 
               (KEYWORD:STEP expr)? KEYWORD:THEN
               statement
             | (NEWLINE statements KEYWORD:END)
 
-while-expr  : KEYWORD:WHILE expr KEYWORD:THEN
+while-expr  : KEYWORD:while_tail_wag expr KEYWORD:THEN
               statement
             | (NEWLINE statements KEYWORD:END)
 
