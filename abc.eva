@@ -1,0 +1,8 @@
+whisker a = 12
+whisker b = 18
+
+FUN sum(x,y)
+    RETURN x+y
+END
+
+PRINT(sum(a,b))
