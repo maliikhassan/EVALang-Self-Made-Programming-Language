@@ -1,8 +1,39 @@
-whisker a = 12
-whisker b = 18
-
-FUN sum(x,y)
-    RETURN x+y
+fun_pounce sum(x,y)
+    whisker z = x+y
+    return_belly z
 END
 
-PRINT(sum(a,b))
+## main code
+
+whisker a = 11
+whisker b = 0
+
+if_meow a == 10 THEN whisker b = 2 + 7 else_pounce a == 11 THEN whisker b = 2 + 7 + 10 else_nap whisker b = 0
+meow(b)
+
+for_paw i = 0 TO 10 THEN
+    meow ("OKOK")
+END
+
+while_tail_wag a < 15 THEN
+    meow(a)
+    whisker a = a+1
+END
+
+fun_pounce abc()
+    meow("I am Function Declaration")
+END
+
+abc()
+
+fun_pounce abc1()
+    whisker name = "I am Returned Name"
+    return_belly name
+END
+meow(abc1())
+
+while_tail_wag TRUE THEN
+    meow(a)
+    if_meow a == 18 THEN break_tail
+    whisker a = a+1
+END

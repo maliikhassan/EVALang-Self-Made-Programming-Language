@@ -140,7 +140,7 @@ KEYWORDS = [
   'END',
   'return_belly',
   'CONTINUE',
-  'BREAK',
+  'break_tail',
 ]
 
 class Token:
@@ -631,7 +631,7 @@ class Parser:
       self.advance()
       return res.success(ContinueNode(pos_start, self.current_tok.pos_start.copy()))
       
-    if self.current_tok.matches(TT_KEYWORD, 'BREAK'):
+    if self.current_tok.matches(TT_KEYWORD, 'break_tail'):
       res.register_advancement()
       self.advance()
       return res.success(BreakNode(pos_start, self.current_tok.pos_start.copy()))
@@ -640,7 +640,7 @@ class Parser:
     if res.error:
       return res.failure(InvalidSyntaxError(
         self.current_tok.pos_start, self.current_tok.pos_end,
-        "Expected 'return_belly', 'CONTINUE', 'BREAK', 'whisker', 'if_meow', 'for_paw', 'while_tail_wag', 'fun_pounce', int, float, identifier, '+', '-', '(', '[' or 'NOT'"
+        "Expected 'return_belly', 'CONTINUE', 'break_tail', 'whisker', 'if_meow', 'for_paw', 'while_tail_wag', 'fun_pounce', int, float, identifier, '+', '-', '(', '[' or 'NOT'"
       ))
     return res.success(expr)
 
@@ -2164,7 +2164,7 @@ global_symbol_table.set("NULL", Number.null)
 global_symbol_table.set("FALSE", Number.false)
 global_symbol_table.set("TRUE", Number.true)
 global_symbol_table.set("MATH_PI", Number.math_PI)
-global_symbol_table.set("PRINT", BuiltInFunction.print)
+global_symbol_table.set("meow", BuiltInFunction.print)
 global_symbol_table.set("PRINT_RET", BuiltInFunction.print_ret)
 global_symbol_table.set("INPUT", BuiltInFunction.input)
 global_symbol_table.set("INPUT_INT", BuiltInFunction.input_int)

@@ -2,7 +2,7 @@ statements  : NEWLINE* statement (NEWLINE+ statement)* NEWLINE*
 
 statement		: KEYWORD:return_belly expr?
 						: KEYWORD:CONTINUE
-						: KEYWORD:BREAK
+						: KEYWORD:break_tail
 						: expr
 
 expr        : KEYWORD:VAR IDENTIFIER EQ expr
