@@ -1,6 +1,6 @@
 statements  : NEWLINE* statement (NEWLINE+ statement)* NEWLINE*
 
-statement		: KEYWORD:RETURN expr?
+statement		: KEYWORD:return_belly expr?
 						: KEYWORD:CONTINUE
 						: KEYWORD:BREAK
 						: expr
@@ -53,7 +53,7 @@ while-expr  : KEYWORD:while_tail_wag expr KEYWORD:THEN
               statement
             | (NEWLINE statements KEYWORD:END)
 
-func-def    : KEYWORD:FUN IDENTIFIER?
+func-def    : KEYWORD:fun_pounce IDENTIFIER?
               LPAREN (IDENTIFIER (COMMA IDENTIFIER)*)? RPAREN
               (ARROW expr)
             | (NEWLINE statements KEYWORD:END)
